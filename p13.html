@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Class Structure</h1>
+    </center>
+    <hr>
+
+    <ol>
+        <li>Class => group of objects(property) </li>
+        <li>var, let and const -> var, array, object -> state</li>
+        <li>functions -> method -> behaviors</li>
+    </ol>
+    <hr>
+
+    <script>
+        class Animal{
+            constructor(){
+                // state
+                this.x = 5;
+                this.y = 4;
+            }
+            // Behavior
+            display(){
+                document.write(`<h3>Display Functions</h3>`);
+            }
+            print(){
+                document.write(`<h3>Print function</h3>`);
+            }
+        }
+        let animal = new Animal();
+        document.write(`<h3> ${animal.x} </h3>`);
+        document.write(`<h3> ${animal.y} </h3>`);
+        animal.display();
+        animal.print();
+    </script>
+</body>
+</html>

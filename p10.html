@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>MAP method..!</h1>
+        <p>The map() method creates a new array with the results of calling a provided function on every element in the calling array.</p>
+    </center>
+    <hr>
+
+    <script>
+        const numbers = [2,3,4];
+        document.write("<h3>This is Number array result :</h3>" + numbers);
+
+        const result = numbers.map(function(item, index){
+            return document.write(`<h2>INDEX : ${index} RESULT : ${item}</h3>`);
+        });
+
+        const squares = numbers.map(item => item ** 2);
+        document.write("<h3>This is squares array result :</h3>" + squares); // [4, 9, 15]
+
+        const smartPhones = [{
+            name: 'iphone',
+            price: 100
+        },
+        {
+            name: 'smasung',
+            price: 500
+        },
+        {
+            name: 'REdmi note 11 pro',
+            price: 400
+        },
+        {
+            name: 'REdmi note 11 pro',
+            price: 300
+        }
+    ];
+
+    for (var i = 0; i < smartPhones.length; i++) {
+        document.write("<br>" + smartPhones[i].name + "<br>");
+        document.write("<br>" + smartPhones[i].price + "<br>");
+    }
+
+    // css
+    let prices = smartPhones.map(function(smartphone){
+        return smartphone.price;
+    });
+
+    console.log(prices);
+    document.write("<p>Prices result is : </p>" +prices);
+
+    // css 
+    let prices1 = smartPhones.map((smartphone)=>{
+        return smartphone.price;
+    });
+    console.log(prices1);
+    document.write("<p>Prices1 result is : </p>" + prices1);
+
+    let prices2 = smartPhones.map(smartphone=> smartphone.price);
+    console.log(prices2);
+    document.write("<p>Prices2 result is : </p>" + prices2);
+    </script>
+</body>
+</html>

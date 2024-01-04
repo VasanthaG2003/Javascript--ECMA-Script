@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Rest Operator</h1>
+        <p>Converts parameter into an array => Rest Operator (...)</p>
+    </center>
+    <hr>
+
+    <script>
+        function sumOfDigits(...num){
+            document.write(typeof num)
+
+            let sum = 0;
+
+            for (const iterator of num) {
+                sum += iterator;
+                document.write(`<h3> sum of Digits = ${sum} </h3>`);
+            }
+        }
+        sumOfDigits(5,15,25,30,35,40,45,50);
+    </script>
+</body>
+</html>

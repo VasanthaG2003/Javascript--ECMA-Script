@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Property inside class</h1>
+    </center>
+    <hr>
+
+    <ol>
+        <li>Constructor method invokes at the time of ref creation</li>
+        <li>Constructor will allocates the memory location for properties</li>
+        <li>Properties we can call only w.r.to ref</li>
+    </ol>
+
+    <script>
+        class User{
+            constructor(){
+                // initial properties
+                this.name = "Nethra";
+                this.email = "nathra@gmail.com";
+                this.mobile = 6364128574
+                this.account = {
+                    bank : "SBI",
+                    accNo :"12345843",
+                    balance : 100000
+                }
+            }
+            getUser(){
+                return "hello" + this.name + ", welcome to js";
+            }
+        }
+        let user = new User(); //ref
+
+        document.write(`<h3> ${user.getUser() } </h3>`);
+        document.write(`<h3> ${user.email } </h3>`);
+        document.write(`<h3> ${user.mobile } </h3>`);
+        document.write(`<h3> ${user.name } </h3>`);
+        document.write(`<h3> ${user.account.bank } </h3>`);
+        document.write(`<h3> ${user.account.accNo } </h3>`);
+        document.write(`<h3> ${user.account.balance } </h3>`);
+    </script>
+</body>
+</html>

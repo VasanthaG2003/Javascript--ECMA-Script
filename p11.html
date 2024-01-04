@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>class Syntax contains two components</h3>
+    <ul>
+        <li>class Declarations</li>
+        <li>Class Expressions</li>
+    </ul>
+    <hr>
+    <script>
+        document.write(`<h3>class declarations</h3>`);
+
+        class Test{
+            constructor(){
+                document.write(`<h1>Welcome to Test class</h1>`);
+            }
+        }
+        let test = new Test();
+
+        class Student1{
+            constructor(){}
+                getData(){
+                    let fname = "Bhaskar";
+                    document.write(`the student name is ${fname}`);
+                }
+            }
+        let student1 = new Student1();
+        student1.getData();
+    </script>
+
+    <script>
+        class Student2{
+            constructor(id, name){
+                this.id1 = id;
+                this.name1 = name;
+            }
+            getDisplay(){
+                document.write(`<h1>Student ID is : ${this.id1} and student name is : ${this.name1}</h1>`);
+            }
+        }
+        let student2 = new Student2(11, "Rakshi");
+        student2.getDisplay();
+
+        document.write("<h1>Class Expression Example</h1>");
+        let Employee = class{
+            constructor(id, name){
+                this.id1 = id;
+                this.name1 = name;
+            }
+            getDisplay(){
+                document.write(`<h1>Employee ID is : ${this.id1} and Employee Name is : ${this.name1}</h1>`);
+            }
+        }
+        let employee = new Employee(22, 'Sinch');
+        employee.getDisplay();
+    </script>
+</body>
+</html>

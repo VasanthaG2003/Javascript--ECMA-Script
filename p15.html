@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Prototype Object </h1>
+        <p>Prototype Objects to acquire properties and features from one another.</p>
+
+        <strong>Syntax</strong>
+        <p>ClassName.prototype.methodName</p>
+    </center>
+    <hr>
+
+    <script>
+        function Employee(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+        Employee.prototype.fullName = function() {
+            return this.firstName  + " " + this.lastName;
+        }
+        var emp =new Employee("HTML", "CSS");
+
+        document.write(emp.firstName+"<br>");
+        document.write(emp.lastName+"<br>");
+        document.write(emp.fullName());
+    </script>
+    <hr>
+
+    <script>
+        class Admin{
+            constructor(firstName, lastName){
+                this.fn = firstName;
+                this.ln = lastName;
+            }
+        }
+        let admin = new Admin("Rakshi", "Sinch");
+
+        document.write(`<b>First Name :</b> ${admin.fn}<br>`);
+        document.write(`<b>Last Name : </b>${admin.ln}<br>`);
+
+        Admin.prototype.result = function(){
+            return this.fn + " " + this.ln;
+        }
+        document.write(`<b>Result Function : </b>${admin.result()}<br>`);
+    </script>
+</body>
+</html>
